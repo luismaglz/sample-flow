@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Lato !important;
+}
+
+aside.mdc-drawer.left-drawer {
+    float: left;
+    width: 0;
+    height: 800px;
+}
+
+
+/* Button Styles */
+
+button[mat-button] {
+    text-transform: uppercase;
+    border-radius: 5px;
+    justify-content: center;
+    transition: all .2s ease-out;
+    white-space: no-wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+button[mat-button]:hover>div {
+    background-color: transparent;
+}
+
+button[mat-button][oval] {
+    margin: 5px;
+    border-radius: 19px;
+}
+
+button[mat-button][large] {
+    height: 65px;
+    width: 220px;
+    font-size: 24px;
+}
+
+button[mat-button][small] {
+    height: 50px;
+    width: 185px;
+    font-size: 18px;
+}
+
+button[mat-button][fit] {
+    height: 65px;
+    font-size: 24px;
+}
+
+
+/* Snackbar */
+
+.mat-snack-bar-container.starter-snack-bar {
+    position: absolute;
+    left: 0;
+    top: 64px;
+    width: 100%;
+    max-width: 100%;
+    z-index: 500;
+    padding: 1.06%;
+}
+
+simple-snack-bar.mat-simple-snackbar {
+    font-size: 132%;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+simple-snack-bar.mat-simple-snackbar.success {
+    background-color: green;
+}
+
+simple-snack-bar.mat-simple-snackbar.error {
+    background-color: red;
+}
+
+simple-snack-bar.mat-simple-snackbar.warning {
+    background-color: orange;
+}

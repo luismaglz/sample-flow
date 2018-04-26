@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/material-components-web/dist/material-components-web.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./styles/global-overrides.css">
+</head>
+
+<body>
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <a href="#" class="material-icons mdc-top-app-bar__navigation-icon menu">menu</a>
+                <span class="mdc-top-app-bar__title"><img src="assets/images/header/dot-rez-logo.png"/></span>
+                <span class="header-buttons-container">
+                        <button class="mdc-button header-button">book</button>
+                        <button class="mdc-button header-button">checkin</button>
+                        <button class="mdc-button header-button">mytrips</button>
+                </span>
+            </section>
+        </div>
+    </header>
+    <aside class="mdc-drawer left-drawer mdc-drawer--persistent mdc-typography">
+        <nav class="mdc-drawer__drawer">
+            <header class="mdc-drawer__header">
+                <div class="mdc-drawer__header-content">
+                    Header here
+                </div>
+            </header>
+            <nav id="icon-with-text-demo" class="mdc-drawer__content mdc-list">
+                <a class="mdc-list-item mdc-list-item--activated" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>Inbox
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>Star
+                </a>
+            </nav>
+        </nav>
+    </aside>
+    <div class="content">
+        <div class="home-tabs">
+            <div class="home-tab selected flight">flight</div>
+            <div class="home-tab boarding-pass">boarding pass</div>
+            <div class="home-tab checkin">check-in</div>
+            <div class="home-tab deals">deals</div>
+        </div>
+        <div class="home-tabs-content">
+            <div class="inner-wrapper">
+                <div class="flight-search-component">
+                    <div class="flight-type-select">
+                        <div class="mdc-radio">
+                            <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked>
+                            <div class="mdc-radio__background">
+                                <div class="mdc-radio__outer-circle"></div>
+                                <div class="mdc-radio__inner-circle"></div>
+                            </div>
+                        </div>
+                        <label id="radio-1-label" for="radio-1">One Way</label>
+                        <div class="mdc-radio">
+                            <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios">
+                            <div class="mdc-radio__background">
+                                <div class="mdc-radio__outer-circle"></div>
+                                <div class="mdc-radio__inner-circle"></div>
+                            </div>
+                        </div>
+                        <label id="radio-2-label" for="radio-2">Round Trip</label>
+                    </div>
+                    <div class="fligt-source-destination-select">
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                            <input type="text" id="tf-outlined" class="mdc-text-field__input">
+                            <label for="tf-outlined" class="mdc-floating-label">Your Name</label>
+                            <div class="mdc-notched-outline">
+                                <svg>
+                                    <path class="mdc-notched-outline__path"/>
+                                </svg>
+                            </div>
+                            <div class="mdc-notched-outline__idle"></div>
+                        </div>
+                    </div>
+                    <div class="mdc-select">
+                        <select class="mdc-select__native-control">
+                              <option value="" disabled selected></option>
+                              <option value="grains">
+                                Bread, Cereal, Rice, and Pasta
+                              </option>
+                              <option value="vegetables">
+                                Vegetables
+                              </option>
+                              <option value="fruit">
+                                Fruit
+                              </option>
+                            </select>
+                        <label class="mdc-floating-label">Pick a Food Group</label>
+                        <div class="mdc-line-ripple"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script src="node_modules/material-components-web/dist/material-components-web.js"></script>
+    <script>
+        mdc.autoInit()
+        let drawer = new mdc.drawer.MDCPersistentDrawer(document.querySelector('.mdc-drawer--persistent'));
+        document.querySelector('.menu').addEventListener('click', () => drawer.open = !drawer.open);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+header.mdc-top-app-bar {
+    position: relative;
+}
+
+.header-buttons-container {
+    margin-left: 40px;
+}
+
+.header-buttons-container button.mdc-button.header-button {
+    color: #fff;
+    margin-left: 10px;
+}
+
+.header-buttons-container button.mdc-button.header-button:first-child {
+    margin-left: 0px;
+}
+
+.content {
+    background-image: url(./assets/images/dotrez-background.png);
+    display: flex;
+    flex-direction: column;
+    align-content: justify;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.home-tabs {
+    display: flex;
+}
+
+.home-tabs {
+    display: flex;
+    max-width: 1180px;
+    align-self: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.home-tabs .home-tab {
+    background-color: #fff;
+    flex: 1 1 100%;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-flex;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-left: 0;
+    margin: 0 0 0 0;
+    border-collapse: collapse;
+    align-self: flex-end;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    color: lightgray;
+}
+
+.home-tabs .home-tab.selected {
+    height: 64px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: darkblue;
+    border-bottom: 0;
+}
+
+.home-tabs .home-tab:first-child {
+    border-left: 1px solid lightgray;
+    border-top-left-radius: 8px;
+}
+
+.home-tabs .home-tab:last-child {
+    border-top-right-radius: 8px;
+}
+
+.home-tabs-content {
+    display: flex;
+    width: 100%;
+    max-width: 1180px;
+    align-self: center;
+    flex-direction: row;
+    background-color: #fff;
+}
+
+.home-tabs-content .inner-wrapper {
+    display: flex;
+    flex: 1 1 100%;
+    border: 1px solid lightgray;
+    border-top: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
